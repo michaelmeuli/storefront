@@ -61,7 +61,7 @@
         </ValidationProvider>
         <ValidationProvider
           name="apartment"
-          rules="required|min:2"
+          rules="required|min:1"
           v-slot="{ errors }"
           slim
         >
@@ -149,7 +149,7 @@
         </ValidationProvider>
         <ValidationProvider
           name="phone"
-          rules="required|digits:9"
+          rules="required|min:10"
           v-slot="{ errors }"
           slim
         >
