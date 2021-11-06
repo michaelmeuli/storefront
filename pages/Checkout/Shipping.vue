@@ -77,6 +77,23 @@
           />
         </ValidationProvider>
         <ValidationProvider
+          name="zipCode"
+          rules="required|min:2"
+          v-slot="{ errors }"
+          slim
+        >
+          <SfInput
+            v-e2e="'shipping-zipcode'"
+            v-model="form.postalCode"
+            :label="$t('Zip-code')"
+            name="zipCode"
+            class="form__element form__element--half"
+            required
+            :valid="!errors[0]"
+            :errorMessage="errors[0]"
+          />
+        </ValidationProvider>
+        <ValidationProvider
           name="city"
           rules="required|min:2"
           v-slot="{ errors }"
@@ -87,22 +104,10 @@
             v-model="form.city"
             :label="$t('City')"
             name="city"
-            class="form__element form__element--half"
+            class="form__element form__element--half form__element--half-even"
             required
             :valid="!errors[0]"
             :errorMessage="errors[0]"
-          />
-        </ValidationProvider>
-        <ValidationProvider
-          name="state"
-          slim
-        >
-          <SfInput
-            v-e2e="'shipping-state'"
-            v-model="form.state"
-            :label="$t('State_OR_Province')"
-            name="state"
-            class="form__element form__element--half form__element--half-even"
           />
         </ValidationProvider>
         <ValidationProvider
@@ -131,23 +136,6 @@
           </SfSelect>
         </ValidationProvider>
         <ValidationProvider
-          name="zipCode"
-          rules="required|min:2"
-          v-slot="{ errors }"
-          slim
-        >
-          <SfInput
-            v-e2e="'shipping-zipcode'"
-            v-model="form.postalCode"
-            :label="$t('Zip-code')"
-            name="zipCode"
-            class="form__element form__element--half form__element--half-even"
-            required
-            :valid="!errors[0]"
-            :errorMessage="errors[0]"
-          />
-        </ValidationProvider>
-        <ValidationProvider
           name="phone"
           rules="required|min:10"
           v-slot="{ errors }"
@@ -158,7 +146,7 @@
             v-model="form.phone"
             :label="$t('Phone number')"
             name="phone"
-            class="form__element form__element--half"
+            class="form__element form__element--half form__element--half-even"
             required
             :valid="!errors[0]"
             :errorMessage="errors[0]"
