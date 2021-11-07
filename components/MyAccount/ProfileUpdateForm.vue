@@ -7,7 +7,7 @@
             v-e2e="'myaccount-firstName'"
             v-model="form.firstName"
             name="firstName"
-            label="First Name"
+            label="Vorname"
             required
             :valid="!errors[0]"
             :errorMessage="errors[0]"
@@ -18,7 +18,7 @@
             v-e2e="'myaccount-lastName'"
             v-model="form.lastName"
             name="lastName"
-            label="Last Name"
+            label="Nachname"
             required
             :valid="!errors[0]"
             :errorMessage="errors[0]"
