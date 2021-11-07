@@ -85,7 +85,7 @@ export default {
     display: block;
     width: 100%;
     @include for-desktop {
-      width: 17.5rem;
+      width: 22rem;
     }
   }
   &__horizontal {
